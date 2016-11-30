@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width" />
   <title>Amazon Notes</title>
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet"> -->
   <link href="./css/defaults.css" rel="stylesheet" />
@@ -12,24 +12,19 @@
 
 <body>
   <div id="container">
-    <div id="headerBar">
-      Notes
-    </div>
-    <div id="notesContainer">
+    <header>
+      <h3>Notes</h3>
+    </header>
+    <main id="notesContainer">
       <div id="notesList">
-        <a href="#newNote">
-          <div id="newNote">
-            <span>New Note +</span>
-          </div>
-        </a>
-        <div id="notes">
-        </div>
+        <button class='btn' id="newNote">
+          New Note +
+        </button>
+        <ul id="notes">
+        </ul>
       </div>
       <div id="notesView">
-        <div>
-          <input id="noteTitle" type="text" maxlength="30" placeholder="Title" />
-        </div>
-        <br>
+        <input id="noteTitle" type="text" maxlength="30" placeholder="Title" />
         <select id="noteColor">
           <option value="">white</option>
           <option value="#e74c3c">red</option>
@@ -38,15 +33,14 @@
           <option value="#f1c40f">yellow</option>
         </select>
         <textarea id="noteContent" placeholder="Note..."></textarea>
-        <br>
-        <div id="actionContainer">
+        <section id="actionContainer">
           <button class="btn" id="submit">Submit</button>
           <button class="btn" id="update">Update</button>
           <button class="btn" id="delete">Delete</button>
-        </div>
-        <div id="validation"></div>
+        </section>
+        <section id="validation"></section>
       </div>
-    </div>
+    </main>
   </div>
 
   <script src="./js/notes.js"></script>

@@ -44,10 +44,7 @@ var notesModule = (function() {
     // clear the notes container
     notesList.innerHTML = '';
     if(notes){
-      console.log(notes);
       notes.forEach(function(note, index) {
-        var anchorElement = document.createElement('a');
-        anchorElement.setAttribute('href', '#' + index);
 
         var noteElement = document.createElement('div');
         noteElement.className = 'note';
@@ -70,12 +67,11 @@ var notesModule = (function() {
         noteElement.onclick = function() {
           getNote(this.getAttribute('data-id'))
         };
-        anchorElement.appendChild(noteElement);
 
         // delete button
         elements.deleteButton.setAttribute('data-id', index);
 
-        notesList.appendChild(anchorElement);
+        notesList.appendChild(noteElement);
       });
     } else {
       newNote();
